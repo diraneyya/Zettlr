@@ -92,7 +92,7 @@ export default function (): any {
         },
         {
           type: 'checkbox',
-          label: 'Use fixed keyboard layout for Vim Normal mode',
+          label: trans('dialog.preferences.vim_fixed_keyboard_layout'),
           model: 'editor.vimFixedKeyboardLayout'
         }
       ],

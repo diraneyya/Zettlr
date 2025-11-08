@@ -277,6 +277,7 @@
             "indent_with_tabs": "Indent using tabs",
             "input_mode": "Editor input mode",
             "leave_app_running_in_the_notification_area": "Leave app running in the notification area",
+            "vim_fixed_keyboard_layout": "Use fixed keyboard layout for Vim Normal mode",
             "modtime": "Last modification time",
             "mute_lines": "Mute non-focused lines in distraction-free mode",
             "new_file_dont_prompt": "Do not prompt for filename when creating new files",
