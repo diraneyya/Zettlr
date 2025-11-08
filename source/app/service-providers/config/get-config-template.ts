@@ -120,6 +120,7 @@ export default function getConfigTemplate (): ConfigOptions {
       fontSize: 16, // The editor's font size in pixels
       countChars: false, // Set to true to enable counting characters instead of words
       inputMode: 'default', // Can be default, vim, emacs
+      vimFixedKeyboardLayout: false, // Use physical key positions for Vim Normal mode (works with any keyboard layout)
       boldFormatting: '**', // Can be ** or __
       italicFormatting: '_', // Can be * or _
       readabilityAlgorithm: 'dale-chall', // The algorithm to use with readability mode.

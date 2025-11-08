@@ -64,6 +64,7 @@ import typewriterHook from './hooks/typewriter'
 import { autocompleteHook, setAutocompleteDatabase } from './hooks/autocomplete'
 import linkTooltipsHook from './hooks/link-tooltips'
 import noteTooltipsHook from './hooks/note-preview'
+import vimFixedKeyboard, { vimFixedKeyboardCleanup } from './hooks/vim-fixed-keyboard'
 
 import displayContextMenu from './display-context-menu'
 
@@ -136,6 +137,7 @@ export default class MarkdownEditor extends EventEmitter {
     autocompleteHook(this._instance)
     linkTooltipsHook(this._instance)
     noteTooltipsHook(this._instance)
+    vimFixedKeyboard(this._instance)
 
     // Indicate interactive elements while either the Command or Control-key is
     // held down.
@@ -261,6 +263,20 @@ export default class MarkdownEditor extends EventEmitter {
       if (command === 'update' && payload === 'display.theme') {
         clearLineIndentationCache()
         this._instance.refresh()
+      }
+
+      // Handle vim fixed keyboard toggle
+      if (command === 'update' && payload === 'editor.vimFixedKeyboardLayout') {
+        // Remove old listener if it exists
+        vimFixedKeyboardCleanup(this._instance)
+        // Re-initialize with new config
+        vimFixedKeyboard(this._instance)
+      }
+
+      // Handle input mode changes (switching to/from Vim mode)
+      if (command === 'update' && payload === 'editor.inputMode') {
+        vimFixedKeyboardCleanup(this._instance)
+        vimFixedKeyboard(this._instance)
       }
     })
 

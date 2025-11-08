@@ -95,6 +95,7 @@ interface ConfigOptions {
     fontSize: number
     countChars: boolean
     inputMode: 'default'|'vim'|'emacs'
+    vimFixedKeyboardLayout: boolean
     boldFormatting: '**'|'__'
     italicFormatting: '_'|'*'
     readabilityAlgorithm: string

@@ -89,6 +89,11 @@ export default function (): any {
             'emacs': 'Emacs',
             'vim': 'Vim'
           }
+        },
+        {
+          type: 'checkbox',
+          label: 'Use fixed keyboard layout for Vim Normal mode',
+          model: 'editor.vimFixedKeyboardLayout'
         }
       ],
       [
