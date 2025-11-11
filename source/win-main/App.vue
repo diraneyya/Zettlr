@@ -520,6 +520,14 @@ const toolbarControls = computed<ToolbarControl[]>(() => {
     },
     {
       type: 'toggle',
+      id: 'toggle-vim-mode',
+      title: trans('Toggle Vim Mode'),
+      icon: 'terminal',
+      initialState: configStore.config.editor.inputMode === 'vim',
+      visible: getToolbarButtonDisplay('showVimModeToggle')
+    },
+    {
+      type: 'toggle',
       id: 'toggle-sidebar',
       title: trans('Toggle Sidebar'),
       icon: 'view-columns',
@@ -891,6 +899,10 @@ function handleToggle (controlState: { id?: string, state?: string | boolean }):
   const { id, state } = controlState
   if (id === 'toggle-sidebar') {
     configStore.setConfigValue('window.sidebarVisible', state)
+  } else if (id === 'toggle-vim-mode') {
+    // Toggle between vim and default mode
+    const newMode = state ? 'vim' : 'default'
+    configStore.setConfigValue('editor.inputMode', newMode)
   } else if (id === 'toggle-file-manager') {
     // Since this is a three-way-toggle, we have to inspect the state.
     fileManagerVisible.value = state !== undefined

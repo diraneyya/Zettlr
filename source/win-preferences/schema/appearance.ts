@@ -199,6 +199,11 @@ export function getAppearanceFields (config: ConfigOptions): PreferencesFieldset
           type: 'checkbox',
           label: trans('Display Pomodoro timer'),
           model: 'displayToolbarButtons.showPomodoroButton'
+        },
+        {
+          type: 'checkbox',
+          label: trans('Display "Vim mode" toggle'),
+          model: 'displayToolbarButtons.showVimModeToggle'
         }
       ]
     },

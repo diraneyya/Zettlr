@@ -39,6 +39,9 @@ This folder contains comprehensive documentation about the Vim Fixed Keyboard La
 ### Vim Direction Reversal Feature (IMPLEMENTED)
 - **[VIM_DIRECTION_REVERSAL_FEATURE.md](VIM_DIRECTION_REVERSAL_FEATURE.md)** - ✅ Direction-aware h/l command reversal for RTL documents
 
+### Vim Toolbar Toggle Feature (IMPLEMENTED)
+- **[VIM_TOOLBAR_TOGGLE_FEATURE.md](VIM_TOOLBAR_TOGGLE_FEATURE.md)** - ✅ Quick-access toolbar button to toggle Vim mode on/off
+
 ## Feature Status
 
 ### ✅ Completed (Zettlr 3.6.0)
@@ -49,6 +52,8 @@ This folder contains comprehensive documentation about the Vim Fixed Keyboard La
 4. **Conditional UI** - Settings only show when relevant (Vim mode selected, feature enabled)
 5. **Config Integration** - Proper configuration sync between UI and editor
 6. **Instant Updates** - Fixed throttling issue for immediate preference changes
+7. **Vim Direction Reversal** - Direction-aware h/l command reversal for RTL documents
+8. **Vim Toolbar Toggle** - Quick-access toolbar button to toggle Vim mode on/off
 
 ### Implementation Files
 

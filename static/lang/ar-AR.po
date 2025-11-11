@@ -767,6 +767,10 @@ msgstr "تبديل مدير الملفات"
 msgid "Toggle Sidebar"
 msgstr "تبديل الشريط الجانبي"
 
+#: source/tmp/win-main/App.vue.ts:524
+msgid "Toggle Vim Mode"
+msgstr "تبديل وضع Vim"
+
 #: source/app/service-providers/menu/menu.win32.ts:480
 #: source/app/service-providers/menu/menu.darwin.ts:500
 msgid "Reset zoom"
@@ -3275,6 +3279,10 @@ msgstr "عرض عداد الكلمات/الأحرف"
 #: source/win-preferences/schema/appearance.ts:200
 msgid "Display Pomodoro timer"
 msgstr "عرض مؤقت بومودورو"
+
+#: source/win-preferences/schema/appearance.ts:205
+msgid "Display \"Vim mode\" toggle"
+msgstr "عرض زر \"تبديل وضع Vim\""
 
 #: source/win-preferences/schema/appearance.ts:206
 msgid "Status bar"

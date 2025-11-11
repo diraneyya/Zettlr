@@ -181,6 +181,7 @@ export interface ConfigOptions {
     showInsertFootnoteButton: boolean
     showDocumentInfoText: boolean
     showPomodoroButton: boolean
+    showVimModeToggle: boolean
   }
   uuid: string
 }
@@ -430,7 +431,8 @@ export function getConfigTemplate (): ConfigOptions {
       showInsertTableButton: true,
       showInsertFootnoteButton: true,
       showDocumentInfoText: true,
-      showPomodoroButton: true
+      showPomodoroButton: true,
+      showVimModeToggle: false
     },
     uuid: uuid4() // The app's unique anonymous identifier
   }
