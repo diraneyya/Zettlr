@@ -90,6 +90,35 @@ yarn reveal:build
 yarn update:citeproc
 ```
 
+### Release Management
+
+```bash
+# Update an existing release with new binaries
+./scripts/update-release.sh v3.6.0-arabic-beta1 -y
+
+# Manual process:
+# 1. Commit changes
+git add .
+git commit -m "feat: Your changes"
+
+# 2. Push to branch
+git push fork v3.6.0-arabic
+
+# 3. Force-move tag to new commit
+git tag -f v3.6.0-arabic-beta1
+git push fork v3.6.0-arabic-beta1 --force
+
+# 4. Manually trigger workflow (tag push doesn't auto-trigger)
+gh workflow run build-arabic.yml --repo diraneyya/Zettlr-Arabic --ref v3.6.0-arabic-beta1
+
+# 5. Review draft release in GitHub UI (Releases page)
+# 6. Publish when ready
+```
+
+**Note**: Releases are created as **drafts** by default. Only visible to repo owners. Review binaries and release notes before publishing.
+
+See [context/BUILD_AUTOMATION_SETUP.md](context/BUILD_AUTOMATION_SETUP.md) for detailed release process documentation.
+
 ## Architecture Overview
 
 ### Process Architecture
