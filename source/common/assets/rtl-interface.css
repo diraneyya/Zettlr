@@ -21,6 +21,33 @@
   flex-direction: row-reverse;
 }
 
+/**
+ * CRITICAL FIX: Windows RTL Menu Positioning
+ *
+ * On Windows, the menubar (File, Edit, View) appears on the right side in RTL mode,
+ * colliding with window controls (close, maximize, minimize).
+ *
+ * Solution: Keep menubar LTR on Windows only to prevent collision.
+ * - Menu items stack left-to-right
+ * - Window controls remain on the right
+ * - All content (editor, file manager, preferences) stays RTL
+ */
+body.win32 .rtl-interface #menubar {
+  direction: ltr !important;
+  padding-left: 30px; /* Keep logo on left */
+  padding-right: 145px; /* Reserve space for window controls (3 buttons × 45px + margin) */
+}
+
+body.win32 .rtl-interface #menubar span.top-level-item {
+  float: left; /* Ensure menu items stack left-to-right */
+}
+
+/* Ensure window controls stay on the right on Windows */
+body.win32 .rtl-interface #window-controls {
+  right: 0;
+  left: auto;
+}
+
 /* Window chrome specific layout fixes */
 .rtl-interface .window-chrome .toolbar-container {
   flex-direction: row-reverse;

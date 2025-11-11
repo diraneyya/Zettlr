@@ -33,6 +33,9 @@ This folder contains comprehensive documentation about the Vim Fixed Keyboard La
 ### Cursor Display Issue (RESOLVED)
 - **[VIM_CURSOR_DISPLAY_ISSUE.md](VIM_CURSOR_DISPLAY_ISSUE.md)** - ✅ Mouse selection prevention to maintain cursor visibility
 
+### RTL Window Layout Issue (RESOLVED)
+- **[RTL_MENU_WINDOWS_SOLUTION.md](RTL_MENU_WINDOWS_SOLUTION.md)** - ✅ Windows menubar collision fix for Arabic RTL interface
+
 ## Feature Status
 
 ### ✅ Completed (Zettlr 3.6.0)
