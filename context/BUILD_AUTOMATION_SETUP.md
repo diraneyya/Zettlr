@@ -233,10 +233,14 @@ git push fork v3.6.0-arabic-beta2
 When you need to update binaries for an existing tag (e.g., after fixing icons):
 
 ```bash
-# Commit your changes
+# 1. Commit your changes
 git add resources/icons/
 git commit -m "feat: Update app icons"
 
+# 2. Use the update script (recommended)
+./scripts/update-release.sh v3.6.0-arabic-beta1 -y
+
+# OR manually:
 # Push to branch
 git push fork v3.6.0-arabic
 
@@ -244,13 +248,24 @@ git push fork v3.6.0-arabic
 git tag -f v3.6.0-arabic-beta1
 git push fork v3.6.0-arabic-beta1 --force
 
-# The workflow will automatically:
-# 1. Rebuild all platforms
-# 2. Update the existing release
-# 3. Replace all binaries (overwrite: true)
+# Manually trigger the workflow (tag push doesn't auto-trigger on forks)
+gh workflow run build-arabic.yml --repo diraneyya/Zettlr-Arabic --ref v3.6.0-arabic-beta1
 ```
 
-**How it works**: The workflow uses `softprops/action-gh-release@v2` with `overwrite: true`, which replaces existing release assets when the same tag is pushed again.
+**The workflow will:**
+1. Rebuild all platforms with the new changes
+2. Update the existing release (using the tag name)
+3. Replace all binaries (`overwrite_files: true`)
+4. Update release notes from `.github/RELEASE_TEMPLATE.md`
+5. Create as **draft** for review before publishing
+
+**How it works**: The workflow uses `softprops/action-gh-release@v2` with `tag_name` and `overwrite_files: true`, which identifies the release by tag and replaces existing assets.
+
+**Note on draft releases**:
+- Releases are created as drafts by default (`draft: true`)
+- Only visible to repository owners in the Releases page (yellow "Draft" badge)
+- Review the release notes and verify binaries before publishing
+- To publish: Edit the draft → Click "Publish release"
 
 ## Tools Used
 
