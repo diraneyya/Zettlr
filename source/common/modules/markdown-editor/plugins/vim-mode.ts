@@ -22,6 +22,7 @@ import { configField } from '../util/configuration'
 import { editorMetadataFacet } from './editor-metadata'
 import type { DocumentManagerIPCAPI } from 'source/app/service-providers/documents'
 import { vimCustomKeyMappings } from '../hooks/vim-fixed-keyboard'
+import { vimDirectionReversal } from '../hooks/vim-direction-reversal'
 
 const ipcRenderer = window.ipc
 
@@ -118,6 +119,7 @@ Vim.unmap('<C-c>', 'insert') // Allow using Ctrl+C without exiting Insert mode
 export function vimPlugin (): Extension {
   return [
     vim(),
+    vimDirectionReversal(), // CRITICAL: Must come BEFORE vimCustomKeyMappings to intercept h/l first
     vimCustomKeyMappings() // Add support for custom vim key mappings (modifier keys)
   ]
 } 

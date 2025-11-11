@@ -27,6 +27,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Build Automation**: [context/BUILD_AUTOMATION_SETUP.md](context/BUILD_AUTOMATION_SETUP.md)
 - **Dual Cursor Design**: [context/ARABIC_DUAL_CURSOR_DESIGN.md](context/ARABIC_DUAL_CURSOR_DESIGN.md)
 - **RTL Menu Fix**: [context/RTL_MENU_WINDOWS_SOLUTION.md](context/RTL_MENU_WINDOWS_SOLUTION.md)
+- **Vim Direction Reversal**: [context/VIM_DIRECTION_REVERSAL_FEATURE.md](context/VIM_DIRECTION_REVERSAL_FEATURE.md)
 
 ## Project Overview
 

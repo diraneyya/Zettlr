@@ -36,6 +36,9 @@ This folder contains comprehensive documentation about the Vim Fixed Keyboard La
 ### RTL Window Layout Issue (RESOLVED)
 - **[RTL_MENU_WINDOWS_SOLUTION.md](RTL_MENU_WINDOWS_SOLUTION.md)** - ✅ Windows menubar collision fix for Arabic RTL interface
 
+### Vim Direction Reversal Feature (IMPLEMENTED)
+- **[VIM_DIRECTION_REVERSAL_FEATURE.md](VIM_DIRECTION_REVERSAL_FEATURE.md)** - ✅ Direction-aware h/l command reversal for RTL documents
+
 ## Feature Status
 
 ### ✅ Completed (Zettlr 3.6.0)

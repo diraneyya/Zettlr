@@ -261,6 +261,7 @@ const editorConfiguration = computed<EditorConfigOptions>(() => {
     textDirection: editor.textDirection,
     vimFixedKeyboardLayout: editor.vimFixedKeyboardLayout,
     vimKeyMappings: editor.vimKeyMappings,
+    vimReverseDirectionKeys: editor.vimReverseDirectionKeys,
     lintMarkdown: editor.lint.markdown,
     // The editor only needs to know if it should use languageTool
     lintLanguageTool: editor.lint.languageTool.active,

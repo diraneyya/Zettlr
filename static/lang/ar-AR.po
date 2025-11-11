@@ -4042,3 +4042,11 @@ msgstr "تخصيص مفاتيح أوامر Vim"
 #: source/win-preferences/schema/editor.ts:49
 msgid "Train custom key combinations for Vim commands that require modifier keys on your keyboard layout. For example, on German keyboards \"{\" requires Alt+8. Click \"Key Combination\" and press the key combo to train it. This is optional - only needed for special characters."
 msgstr "قم بتدريب تركيبات مفاتيح مخصصة لأوامر Vim التي تتطلب مفاتيح تعديل على تخطيط لوحة المفاتيح الخاصة بك. على سبيل المثال، على لوحات المفاتيح الألمانية يتطلب \"{\" الضغط على Alt+8. انقر على \"تركيبة المفاتيح\" واضغط على التركيبة لتدريبها. هذا اختياري - مطلوب فقط للأحرف الخاصة."
+
+#: source/win-preferences/schema/editor.ts:61
+msgid "Reverse h/l direction keys in RTL mode"
+msgstr "عكس مفاتيح الاتجاه h/l في وضع RTL"
+
+#: source/win-preferences/schema/editor.ts:63
+msgid "When enabled, the h and l commands adapt to document direction. In RTL documents (Arabic, Hebrew), l moves left and h moves right, matching the logical reading direction."
+msgstr "عند التفعيل، تتكيف أوامر h و l مع اتجاه المستند. في المستندات RTL (العربية، العبرية)، يتحرك l إلى اليسار و h إلى اليمين، بما يتطابق مع اتجاه القراءة المنطقي."

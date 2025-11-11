@@ -103,6 +103,8 @@ export interface ConfigOptions {
     /** @deprecated No longer used - vim plugin handles physical keys automatically */
     vimFixedKeyboardLayout: boolean
     vimKeyMappings: Record<string, KeyMapping>
+    /** When enabled, reverses h/l vim commands in RTL documents (l moves left, h moves right) */
+    vimReverseDirectionKeys: boolean
     boldFormatting: '**'|'__'
     italicFormatting: '_'|'*'
     readabilityAlgorithm: 'dale-chall'|'gunning-fog'|'coleman-liau'|'automated-readability'
@@ -291,6 +293,7 @@ export function getConfigTemplate (): ConfigOptions {
       textDirection: 'auto', // Text direction: ltr (left-to-right), rtl (right-to-left), auto (detect from content)
       vimFixedKeyboardLayout: false, // Enable fixed keyboard layout for Vim Normal mode
       vimKeyMappings: getDefaultVimKeyMappings(), // Custom key mappings for Vim commands
+      vimReverseDirectionKeys: false, // Reverse h/l commands in RTL documents
       boldFormatting: '**', // Can be ** or __
       italicFormatting: '_', // Can be * or _
       readabilityAlgorithm: 'dale-chall', // The algorithm to use with readability mode.

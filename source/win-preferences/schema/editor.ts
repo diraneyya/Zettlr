@@ -53,6 +53,15 @@ export function getEditorFields (config: ConfigOptions): PreferencesFieldset[] {
       type: 'vim-key-mapping-trainer',
       model: 'editor.vimKeyMappings'
     })
+
+    inputModeFields.push({ type: 'separator' })
+
+    inputModeFields.push({
+      type: 'checkbox',
+      label: trans('Reverse h/l direction keys in RTL mode'),
+      model: 'editor.vimReverseDirectionKeys',
+      info: trans('When enabled, the h and l commands adapt to document direction. In RTL documents (Arabic, Hebrew), l moves left and h moves right, matching the logical reading direction.')
+    })
   }
 
   return [

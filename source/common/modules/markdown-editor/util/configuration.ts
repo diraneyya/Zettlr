@@ -80,6 +80,7 @@ export interface EditorConfiguration {
   textDirection: 'ltr'|'rtl'|'auto'
   vimFixedKeyboardLayout: boolean
   vimKeyMappings: Record<string, KeyMapping>
+  vimReverseDirectionKeys: boolean
   muteLines: boolean
   readabilityAlgorithm: 'dale-chall'|'gunning-fog'|'coleman-liau'|'automated-readability'
   readabilityMode: boolean
@@ -141,6 +142,7 @@ export function getDefaultConfig (): EditorConfiguration {
     textDirection: 'ltr',
     vimFixedKeyboardLayout: false,
     vimKeyMappings: getDefaultVimKeyMappings(),
+    vimReverseDirectionKeys: false,
     readabilityMode: false,
     typewriterMode: false,
     distractionFree: false,
