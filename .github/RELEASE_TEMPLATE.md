@@ -19,6 +19,8 @@ An Arabised fork of [Zettlr](https://github.com/Zettlr/Zettlr) - An open-source 
   - Physical cursor tracks actual character positions
   - Visual cursor displays where text appears
   - Fixes issues with isolated vs. connected Arabic characters
+- **VIM Direction Reversal (h/l) RTL Documents**
+- **Quick VIM Toggle in the Toolbar**
 
 ### Technical Improvements
 - **CodeMirror 6 Migration** - Built on Zettlr 3.6.0 with modern CM6 architecture

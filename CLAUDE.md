@@ -439,6 +439,26 @@ This suggests something is preventing ALL user interaction, not just keyboard ev
 
 **Mode Change Detected**: The vim mode DID change from `normal → visual` when attempting interaction, suggesting vim plugin IS responding but something blocks the DOM interaction.
 
+### Debugging Strategy for Visual Rendering Issues
+
+When debugging visual rendering bugs (e.g., invisible content in RTL mode):
+
+1. **Take Screenshots**: Use `mcp__electron__take_screenshot` to capture the current state
+2. **Check Console Logs**: Use `mcp__electron__read_electron_logs` to see direction changes and errors
+3. **Test Isolation**: Remove elements systematically (e.g., remove list markers) to identify the specific cause
+4. **Inspect Computed Styles**: While direct DOM inspection via `eval` commands may fail, you can:
+   - Use screenshots to see visual state
+   - Check console logs for direction/mode changes
+   - Test with different content to isolate the problem
+5. **Verify Assumptions**: Always test opposite scenarios (LTR vs RTL, with/without markers) to confirm root cause
+
+**Example**: RTL List Bug Investigation
+- Screenshot showed lists invisible in RTL mode but visible in LTR mode
+- Removing list markers (`-`) made text visible → identified markers as the trigger
+- Console logs confirmed `direction: rtl` was applied
+- Root cause: `visual-indent.ts` used `padding-left` in RTL mode, pushing content off-screen
+- Fix: Detect RTL and use `padding-right` instead
+
 ## Common Issues
 
 ### Config Changes Not Taking Effect

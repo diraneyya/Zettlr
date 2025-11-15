@@ -158,7 +158,17 @@ function render (view: EditorView, measurements?: Map<string, number>): RangeSet
       // base styles from somewhere in the library. We need to account for that
       // not to induce any problems.
       const basePadding = 6
-      const deco = Decoration.line({ attributes: { style: `text-indent: -${indent-basePadding}px; padding-left: ${indent}px;` } })
+
+      // Detect RTL mode from the editor's direction attribute
+      const isRTL = view.dom.getAttribute('dir') === 'rtl'
+
+      // In RTL mode, we still need negative text-indent, but we use padding-right
+      // instead of padding-left to prevent list content from being pushed off-screen
+      const style = isRTL
+        ? `text-indent: -${indent-basePadding}px; padding-right: ${indent}px;`
+        : `text-indent: -${indent-basePadding}px; padding-left: ${indent}px;`
+
+      const deco = Decoration.line({ attributes: { style } })
       ranges.push(deco.range(line.from))
     }
   }
