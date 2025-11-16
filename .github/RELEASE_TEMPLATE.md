@@ -31,9 +31,12 @@ An Arabised fork of [Zettlr](https://github.com/Zettlr/Zettlr) - An open-source 
 ### macOS (Apple Silicon)
 ```bash
 # Download Zettlr-3.6.0-arm64.dmg
-# After installation, remove quarantine:
+# After installation, remove quarantine and re-sign the app:
 sudo xattr -cr /Applications/Zettlr.app
+codesign --force --deep --sign - /Applications/Zettlr.app
 ```
+
+**Important**: Both commands are required. The first removes the quarantine flag, the second re-signs the app to prevent crashes.
 
 ### Windows (64-bit)
 ```bash
@@ -70,8 +73,8 @@ chmod +x Zettlr-3.6.0-x86_64.AppImage
 
 ## ⚠️ Known Issues
 
-- **Unsigned Builds**: These builds are not code-signed. You may need to allow installation from unidentified developers.
-- **First Launch**: macOS users must run `sudo xattr -cr /Applications/Zettlr.app` after installation.
+- **Unsigned Builds**: These builds are not code-signed. macOS users must re-sign the app after installation (see installation instructions above).
+- **macOS Code Signature**: The app will crash on launch unless you run both `xattr -cr` and `codesign` commands after installation.
 - **Performance**: Very large documents (>10,000 lines) may experience slowdowns with complex Arabic text.
 
 ## 🔗 Links
