@@ -443,8 +443,19 @@ export function getConfigTemplate (): ConfigOptions {
  * These are initially empty (unmapped), and users can train them via the UI.
  */
 function getDefaultVimKeyMappings (): Record<string, KeyMapping> {
-  // Pre-populate with common Vim characters that typically require modifiers on non-QWERTY layouts
-  const vimChars = ['{', '}', '[', ']', '(', ')', '@', '#', '$', '%', '^', '&', '*']
+  // Pre-populate with Vim characters that typically require modifiers on non-QWERTY layouts
+  // Organized by priority tiers (see context/VIM_SPECIAL_CHARACTERS_RESEARCH.md)
+  const vimChars = [
+    // Tier 1: CRITICAL - Essential for basic Vim functionality
+    '.', ':', '/', '?', '0', '"', '<', '>', '=',
+
+    // Tier 2: HIGH - Common navigation and operations (existing + new)
+    '{', '}', '[', ']', '(', ')', '@', '#', '$', '%', '^', '&', '*',
+    ';', ',', '-', '+',
+
+    // Tier 3: MEDIUM - Advanced text manipulation
+    '~', "'", '`', '!', '_', '|'
+  ]
 
   const mappings: Record<string, KeyMapping> = {}
 

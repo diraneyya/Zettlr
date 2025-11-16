@@ -6,6 +6,7 @@ This folder contains comprehensive documentation about the Vim Fixed Keyboard La
 
 ### Core Feature Files
 - **[VIM_FIXED_KEYBOARD_EXPLANATION.md](VIM_FIXED_KEYBOARD_EXPLANATION.md)** - Complete feature specification and design rationale
+- **[VIM_SPECIAL_CHARACTERS_RESEARCH.md](VIM_SPECIAL_CHARACTERS_RESEARCH.md)** - Exhaustive research on all Vim commands requiring special characters (33 total)
 - **[KEYBOARD_TRAINING_FEATURE.md](KEYBOARD_TRAINING_FEATURE.md)** - Interactive key training UI specification
 - **[VIM_FIXED_KEYBOARD_MIGRATION_COMPLETE.md](VIM_FIXED_KEYBOARD_MIGRATION_COMPLETE.md)** - Migration completion summary
 
@@ -48,12 +49,13 @@ This folder contains comprehensive documentation about the Vim Fixed Keyboard La
 
 1. **Physical Key Mapping** - Maps physical keyboard positions to Vim commands
 2. **Interactive Key Training UI** - User-friendly interface to train modifier-based key combinations
-3. **Arabic Translations** - Full Arabic localization for all feature UI elements
-4. **Conditional UI** - Settings only show when relevant (Vim mode selected, feature enabled)
-5. **Config Integration** - Proper configuration sync between UI and editor
-6. **Instant Updates** - Fixed throttling issue for immediate preference changes
-7. **Vim Direction Reversal** - Direction-aware h/l command reversal for RTL documents
-8. **Vim Toolbar Toggle** - Quick-access toolbar button to toggle Vim mode on/off
+3. **Comprehensive Character Support** - 33 total Vim special characters across 3 priority tiers (Tier 1: Critical 9, Tier 2: High 17, Tier 3: Medium 6)
+4. **Arabic Translations** - Full Arabic localization for all feature UI elements (including all 33 character descriptions)
+5. **Conditional UI** - Settings only show when relevant (Vim mode selected, feature enabled)
+6. **Config Integration** - Proper configuration sync between UI and editor
+7. **Instant Updates** - Fixed throttling issue for immediate preference changes
+8. **Vim Direction Reversal** - Direction-aware h/l command reversal for RTL documents
+9. **Vim Toolbar Toggle** - Quick-access toolbar button to toggle Vim mode on/off
 
 ### Implementation Files
 

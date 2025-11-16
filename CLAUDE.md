@@ -19,6 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Key Documents
 
 - **Feature Spec**: [context/VIM_FIXED_KEYBOARD_EXPLANATION.md](context/VIM_FIXED_KEYBOARD_EXPLANATION.md)
+- **Special Characters Research**: [context/VIM_SPECIAL_CHARACTERS_RESEARCH.md](context/VIM_SPECIAL_CHARACTERS_RESEARCH.md)
 - **Training UI**: [context/KEYBOARD_TRAINING_FEATURE.md](context/KEYBOARD_TRAINING_FEATURE.md)
 - **Migration Guide**: [context/MIGRATION_GUIDE_3.6.0.md](context/MIGRATION_GUIDE_3.6.0.md)
 - **Config Issues**: [context/CONFIG_THROTTLING_ISSUE.md](context/CONFIG_THROTTLING_ISSUE.md)

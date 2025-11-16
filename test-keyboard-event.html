@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Event Test</title>
+</head>
+<body>
+  <h1>Press any key to see event properties</h1>
+  <textarea id="test" style="width: 100%; height: 200px;"></textarea>
+  <pre id="output" style="border: 1px solid #ccc; padding: 10px; margin-top: 20px;"></pre>
+
+  <script>
+    document.getElementById('test').addEventListener('keydown', (event) => {
+      const info = {
+        'key': event.key,           // The character: 'j' or 'ت'
+        'code': event.code,         // Physical key: 'KeyJ'
+        'keyCode': event.keyCode,   // Legacy: 74
+        'which': event.which,       // Legacy: 74
+        'location': event.location, // 0=standard, 1=left, 2=right, 3=numpad
+        'altKey': event.altKey,
+        'ctrlKey': event.ctrlKey,
+        'metaKey': event.metaKey,
+        'shiftKey': event.shiftKey
+      };
+
+      document.getElementById('output').textContent = JSON.stringify(info, null, 2);
+    });
+  </script>
+</body>
+</html>

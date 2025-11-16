@@ -4058,3 +4058,104 @@ msgstr "عكس مفاتيح الاتجاه h/l في وضع RTL"
 #: source/win-preferences/schema/editor.ts:63
 msgid "When enabled, the h and l commands adapt to document direction. In RTL documents (Arabic, Hebrew), l moves left and h moves right, matching the logical reading direction."
 msgstr "عند التفعيل، تتكيف أوامر h و l مع اتجاه المستند. في المستندات RTL (العربية، العبرية)، يتحرك l إلى اليسار و h إلى اليمين، بما يتطابق مع اتجاه القراءة المنطقي."
+
+# Vim character descriptions (for tooltips and help text)
+# Tier 1: Critical characters
+msgid "vim.char.dot"
+msgstr "تكرار آخر تغيير"
+
+msgid "vim.char.colon"
+msgstr "وضع الأوامر"
+
+msgid "vim.char.slash"
+msgstr "بحث للأمام"
+
+msgid "vim.char.question"
+msgstr "بحث للخلف"
+
+msgid "vim.char.zero"
+msgstr "بداية السطر"
+
+msgid "vim.char.quote.double"
+msgstr "السجلات المسماة"
+
+msgid "vim.char.less"
+msgstr "إزاحة لليسار"
+
+msgid "vim.char.greater"
+msgstr "إزاحة لليمين"
+
+msgid "vim.char.equals"
+msgstr "ضبط المحاذاة تلقائياً"
+
+# Tier 2: High priority characters (new additions)
+msgid "vim.char.semicolon"
+msgstr "تكرار f/t للأمام"
+
+msgid "vim.char.comma"
+msgstr "تكرار f/t للخلف"
+
+msgid "vim.char.minus"
+msgstr "السطر السابق"
+
+msgid "vim.char.plus"
+msgstr "السطر التالي"
+
+# Tier 2: High priority characters (existing)
+msgid "vim.char.brace.left"
+msgstr "فقرة/كتلة سابقة"
+
+msgid "vim.char.brace.right"
+msgstr "فقرة/كتلة تالية"
+
+msgid "vim.char.bracket.left"
+msgstr "أوامر الأقواس المربعة"
+
+msgid "vim.char.bracket.right"
+msgstr "أوامر الأقواس المربعة"
+
+msgid "vim.char.paren.left"
+msgstr "جملة سابقة"
+
+msgid "vim.char.paren.right"
+msgstr "جملة تالية"
+
+msgid "vim.char.at"
+msgstr "تشغيل ماكرو"
+
+msgid "vim.char.hash"
+msgstr "بحث عن الكلمة للخلف"
+
+msgid "vim.char.dollar"
+msgstr "نهاية السطر"
+
+msgid "vim.char.percent"
+msgstr "القوس المطابق"
+
+msgid "vim.char.caret"
+msgstr "أول حرف غير فارغ"
+
+msgid "vim.char.ampersand"
+msgstr "تكرار الاستبدال الأخير"
+
+msgid "vim.char.asterisk"
+msgstr "بحث عن الكلمة للأمام"
+
+# Tier 3: Medium priority characters
+msgid "vim.char.tilde"
+msgstr "تبديل حالة الأحرف"
+
+msgid "vim.char.quote.single"
+msgstr "علامة السطر"
+
+msgid "vim.char.backtick"
+msgstr "علامة الموضع الدقيق"
+
+msgid "vim.char.exclamation"
+msgstr "تصفية عبر أمر خارجي"
+
+msgid "vim.char.underscore"
+msgstr "أول حرف غير فارغ (بديل ^)"
+
+msgid "vim.char.pipe"
+msgstr "الانتقال للعمود"
