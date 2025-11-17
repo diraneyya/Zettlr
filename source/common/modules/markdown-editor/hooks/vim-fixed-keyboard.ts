@@ -167,9 +167,21 @@ class VimCustomKeyMappingsPlugin implements PluginValue {
   /**
    * Prevents character insertion in normal/visual mode by canceling input events
    * This is a minimal, comprehensive approach: block ALL input in normal/visual, allow ALL in insert
+   * Exception: Allow input when vim dialog is open (search mode, ex commands)
    */
   private handleBeforeInput (event: InputEvent): void {
     console.log('[Vim Custom Key Mappings] BeforeInput event - mode:', this.currentMode, 'inputType:', event.inputType)
+
+    // Get vim state to check for command-line mode (search, ex commands)
+    const cm = getCM(this.view)
+
+    // CRITICAL: Allow input when dialog is open (search /, ?, or ex commands :)
+    // cm.state.dialog is set by vim plugin when opening search prompt or ex command line
+    // This allows users to type search queries with non-Latin keyboards
+    if (cm?.state?.dialog) {
+      console.log('[Vim Custom Key Mappings] ALLOWING input - command-line mode active (dialog open)')
+      return
+    }
 
     // Only prevent input in normal and visual modes
     if (this.currentMode === 'normal' || this.currentMode === 'visual') {
