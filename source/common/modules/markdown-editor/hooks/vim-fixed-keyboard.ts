@@ -172,8 +172,17 @@ class VimCustomKeyMappingsPlugin implements PluginValue {
   private handleBeforeInput (event: InputEvent): void {
     console.log('[Vim Custom Key Mappings] BeforeInput event - mode:', this.currentMode, 'inputType:', event.inputType)
 
-    // Get vim state to check for command-line mode (search, ex commands)
+    // Get config and vim state
+    const config = this.view.state.field(configField)
     const cm = getCM(this.view)
+
+    // CRITICAL: Only block input if fixed keyboard layout feature is enabled
+    // When disabled (default), let vim plugin handle all keyboard input naturally
+    // This allows capital letter commands (G, E, B, W, etc.) to work properly
+    if (!config.vimFixedKeyboardLayout) {
+      console.log('[Vim Custom Key Mappings] Fixed keyboard feature disabled - allowing vim to handle input naturally')
+      return
+    }
 
     // CRITICAL: Allow input when dialog is open (search /, ?, or ex commands :)
     // cm.state.dialog is set by vim plugin when opening search prompt or ex command line
