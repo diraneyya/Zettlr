@@ -1,37 +1,28 @@
 <h1 align="center">
-  <a href="https://github.com/Zettlr/Zettlr">
-    <img src="https://raw.githubusercontent.com/diraneyya/Zettlr/v3.6.0-arabic/resources/icons/png/256x256.png" alt="Zettlr"/>
-  </a>
-  <br/>
-  Zettlr [<em>ˈset·lər</em>] - Arabic Edition
+  Rlttez <span dir="rtl">رلتز</span> [<em>ral·tez</em>]
 </h1>
 
-<p align="center"><strong>Your One-Stop Publication Workbench - Enhanced for Arabic Writers</strong></p>
+<p align="center"><strong>A publication workbench for Arabic and right-to-left writers</strong></p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.2580173">
-    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2580173.svg" alt="DOI">
-  </a>
   <a href="https://www.gnu.org/licenses/gpl-3.0">
     <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GNU GPL v3">
   </a>
-  <a href="https://www.zettlr.com/download">
-    <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/tag-date/Zettlr/Zettlr.svg?label=latest">
-  </a>
-  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/Zettlr/Zettlr/total.svg">
 </p>
 
 <p align="center">
   <a href="https://www.zettlr.com/" target="_blank">Upstream Homepage</a> |
-  <a href="https://docs.zettlr.com/" target="_blank">Documentation</a> |
+  <a href="https://docs.zettlr.com/" target="_blank">Upstream Documentation</a> |
   <a href="https://github.com/Zettlr/Zettlr">Upstream Repository</a>
 </p>
 
 ---
 
-## About This Fork - Zettlr Arabic Edition
+> **What is this?** Rlttez (رلتز — the name is "Zettlr" mirrored, read right-to-left) is an **unofficial remix** of [Zettlr](https://github.com/Zettlr/Zettlr), where "remix" means a vibe-coded fork: rebuilt with AI assistance (Claude), tested by its author, and maintained independently to serve Arabic and right-to-left writers. It is **not affiliated with, endorsed by, or reviewed by** the Zettlr project or its maintainer, and the Zettlr name is used here only to describe this project's origin. For the official application, visit [zettlr.com](https://www.zettlr.com/).
 
-This fork extends Zettlr 3.6.0 with comprehensive Arabic language support, including a complete Arabic user interface translation and advanced Vim mode features designed specifically for Arabic writers. The implementation provides full right-to-left (RTL) text direction support throughout the application, with native RTL interface layouts for all menus, dialogs, and settings panels.
+## About This Remix
+
+This remix extends Zettlr 3.6.0 with comprehensive Arabic language support, including a complete Arabic user interface translation and advanced Vim mode features designed specifically for Arabic writers. The implementation provides full right-to-left (RTL) text direction support throughout the application, with native RTL interface layouts for all menus, dialogs, and settings panels.
 
 The centerpiece of this fork is the **Fixed Keyboard Layout** feature for Vim mode, which enables Vim navigation commands (h/j/k/l, etc.) to work seamlessly with non-Latin keyboards without requiring keyboard layout switching. This is complemented by an **innovative dual-cursor system** for Arabic and other connected scripts: when editing Arabic text in Vim Normal mode, a yellow word block highlights the entire connected word while a red outline precisely indicates the character under the cursor. This dual-layer visual design preserves the elegant character connections in Arabic script while providing clear cursor positioning feedback that matches Vim's philosophy.
 
